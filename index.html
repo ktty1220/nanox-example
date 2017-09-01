@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>Nanox Example</title>
+    <style>
+      .current {
+        text-decoration: none;
+        cursor: default;
+        color: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <a id="js" href="./index.html?js">JavaScript(es6) version</a>
+    <a id="ts" href="./index.html?ts">TypeScript version</a>
+    <div id="app"></div>
+    <script>
+      var type = (location.search || '?js').substr(1);
+      var script = document.createElement('script');
+      script.src = 'index-' + type + '.js';
+      document.getElementsByTagName('head')[0].appendChild(script);
+
+      var el = document.getElementById(type);
+      el.className = 'current';
+      el.addEventListener('click', function (ev) {
+        ev.preventDefault();
+      });
+    </script>
+  </body>
+</html>

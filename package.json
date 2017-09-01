@@ -1,0 +1,42 @@
+{
+  "name": "nanox-example",
+  "version": "0.1.0",
+  "description": "Simple counter application project using Nanox",
+  "private": true,
+  "scripts": {
+    "js": "cross-env NANOX_BUILD_TYPE=js webpack",
+    "ts": "cross-env NANOX_BUILD_TYPE=ts webpack",
+    "jsw": "cross-env NANOX_BUILD_TYPE=js webpack -w",
+    "tsw": "cross-env NANOX_BUILD_TYPE=ts webpack -w",
+    "build": "npm run js && npm run ts"
+  },
+  "dependencies": {
+    "@types/react": "^16.0.5",
+    "@types/react-dom": "^15.5.4",
+    "nanox": "^0.1.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "cross-env": "^5.0.5",
+    "ts-loader": "^2.3.4",
+    "webpack": "^3.5.5"
+  },
+  "babel": {
+    "presets": [
+      "react",
+      "stage-2",
+      "es2015"
+    ]
+  },
+  "author": {
+    "name": "ktty1220",
+    "email": "ktty1220@gmail.com"
+  },
+  "license": "MIT"
+}
