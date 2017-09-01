@@ -1997,14 +1997,11 @@ nan@^2.3.0:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.6.2.tgz#e4ff34e6c95fdfb5aecc08de6596f43605a7db45"
 
-"nanox@file:../nanox":
+nanox@^0.1.0:
   version "0.1.0"
+  resolved "https://registry.yarnpkg.com/nanox/-/nanox-0.1.0.tgz#30733ce5576fa94f010e4aa4e318ac8aefc79d59"
   dependencies:
-    "@types/react" "^16.0.5"
-    "@types/react-dom" "^15.5.4"
     eventemitter2 "^4.1.2"
-    react "^15.6.1"
-    react-dom "^15.6.1"
     react-micro-container "^1.1.0"
 
 node-fetch@^1.0.1:
