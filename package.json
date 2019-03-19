@@ -13,7 +13,7 @@
   "dependencies": {
     "@types/react": "^16.8.8",
     "@types/react-dom": "^16.8.2",
-    "nanox": "^0.1.2",
+    "nanox": "^0.1.3",
     "react": "^16.8.4",
     "react-dom": "^16.8.4"
   },

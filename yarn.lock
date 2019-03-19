@@ -1606,9 +1606,10 @@ esutils@^2.0.0, esutils@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.2.tgz#0abf4f1caa5bcb1f7a9d8acc6dea4faaa04bac9b"
 
-eventemitter2@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/eventemitter2/-/eventemitter2-5.0.0.tgz#d7f7e256b6314938318e5ed4fd12ac65724962c6"
+eventemitter2@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/eventemitter2/-/eventemitter2-5.0.1.tgz#6197a095d5fb6b57e8942f6fd7eaad63a09c9452"
+  integrity sha1-YZegldX7a1folC9v1+qtY6CclFI=
 
 events@^1.0.0, events@^1.1.0:
   version "1.1.1"
@@ -2548,11 +2549,12 @@ nanomatch@^1.2.9:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-nanox@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/nanox/-/nanox-0.1.2.tgz#d69c747399f73ad7b3e8ccd9f0fe3d1085996223"
+nanox@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/nanox/-/nanox-0.1.3.tgz#f54899256ce20287d1093077c5bf6229f703f8fd"
+  integrity sha512-eU2awpKVdghWs7HfPCojpikXHcLwueAKTXo2pG2VRqmuxgouurPpcbpBX1Ms/Gok4iXOGoDakuVYTtKT9XXYLA==
   dependencies:
-    eventemitter2 "^5.0.0"
+    eventemitter2 "^5.0.1"
     react-micro-container "^1.2.0"
 
 needle@^2.2.1:
