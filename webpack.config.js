@@ -4,16 +4,18 @@ var type = process.env.NANOX_BUILD_TYPE;
 if (! type) throw new Error('process.env.NANOX_BUILD_TYPE is not defined');
 
 var config = {
+  mode: 'development',
   entry: path.join(__dirname, 'src/' + type + '/app.' + type + 'x'),
   output: {
-    filename: './index-' + type + '.js'
+    path: __dirname,
+    filename: 'index-' + type + '.js'
   },
   resolve: {
     extensions: [ '.' + type + 'x', '.' + type ]
   },
   devtool: 'inline-source-map',
   module: {
-    loaders: [{
+    rules: [{
       test: new RegExp('\\.' + type + 'x?$'),
       loader: ((type === 'ts') ? 'ts' : 'babel') + '-loader'
     }]
