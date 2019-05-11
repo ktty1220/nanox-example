@@ -1,11 +1,21 @@
+import { Action } from 'nanox';
+
 export interface State {
   type: string;
   count: number;
   waiting: boolean;
 }
 
-export interface Prop extends State {
-  dispatch(...args: any[]): void;
+export interface MyActions {
+  reset: Action<State>;
+  increment: Action<State>;
+  decrement: Action<State>;
+  waiting: Action<State>;
+  invalid: Action<State>;
+}
+
+export interface Props {
+  actions: MyActions;
 }
 
 export const initialState = () => {

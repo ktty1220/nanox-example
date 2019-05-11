@@ -1,20 +1,24 @@
 /*tslint:disable: no-invalid-this*/
-import { ActionMap } from 'nanox';
-import { State } from '../store';
+import { MyActions } from '../store';
 
-const actions: ActionMap<State> = {
+const actions: MyActions = {
+  reset() {
+    return {
+      count: 0
+    };
+  },
+
   increment(count: number) {
     return {
-      count: this.getState().count + count
+      count: this.state.count + count
     };
   },
 
   decrement(count: number) {
-    this.dispatch('waiting', true);
     return new Promise((resolve, _reject) => {
       setTimeout(() => {
         resolve({
-          count: this.getState().count - count,
+          count: this.state.count - count,
           waiting: false
         });
       }, 1000);
@@ -28,14 +32,7 @@ const actions: ActionMap<State> = {
   },
 
   invalid() {
-    throw new Error('this is invalid action');
-  },
-
-  __error(err) {
-    console.error('error', err.message);
-    return {
-      count: 0
-    };
+    throw new Error('invalid action');
   }
 };
 

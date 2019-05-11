@@ -20,4 +20,4 @@ $ npm run build
 
 After build, open `index.html` in your browser.
 
-&copy; 2017 [ktty1220](mailto:ktty1220@gmail.com)
+&copy; 2019 [ktty1220](mailto:ktty1220@gmail.com)

@@ -1,17 +1,22 @@
 /*eslint-env es6*/
 const actions = {
+  reset() {
+    return {
+      count: 0
+    }
+  },
+
   increment(count) {
     return {
-      count: this.getState().count + count
+      count: this.state.count + count
     };
   },
 
   decrement(count) {
-    this.dispatch('waiting', true);
     return new Promise((resolve, _reject) => {
       setTimeout(() => {
         resolve({
-          count: this.getState().count - count,
+          count: this.state.count - count,
           waiting: false
         });
       }, 1000);
@@ -26,13 +31,6 @@ const actions = {
 
   invalid() {
     throw new Error('invalid action');
-  },
-
-  __error(err) {
-    console.error('error', err.message);
-    return {
-      count: 0
-    };
   }
 };
 

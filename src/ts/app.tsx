@@ -1,5 +1,9 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import actions from './actions';
 import CounterContainer from './container/counter';
 
-ReactDOM.render(<CounterContainer /> as any, document.getElementById('app'));
+ReactDOM.render(
+  <CounterContainer actions={actions} />,
+  document.getElementById('app')
+);
