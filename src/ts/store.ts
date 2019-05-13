@@ -1,17 +1,9 @@
-import { Action } from 'nanox';
+import { MyActions } from './actions';
 
 export interface State {
   type: string;
   count: number;
   waiting: boolean;
-}
-
-export interface MyActions {
-  reset: Action<State>;
-  increment: Action<State>;
-  decrement: Action<State>;
-  waiting: Action<State>;
-  invalid: Action<State>;
 }
 
 export interface Props {

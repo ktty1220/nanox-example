@@ -1,7 +1,16 @@
 /*tslint:disable: no-invalid-this*/
-import { MyActions } from '../store';
+import { Action } from 'nanox';
+import { State } from '../store';
 
-const actions: MyActions = {
+export interface CounterActions {
+  reset: Action<State>;
+  increment: Action<State>;
+  decrement: Action<State>;
+  waiting: Action<State>;
+  invalid: Action<State>;
+}
+
+const actions: CounterActions = {
   reset() {
     return {
       count: 0
