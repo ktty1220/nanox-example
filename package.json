@@ -59,8 +59,10 @@
       "node": true,
       "jest": true
     },
-    "ecmaFeatures": {
-      "jsx": true
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      }
     },
     "plugins": [
       "react"
@@ -68,13 +70,9 @@
     "rules": {
       "react/jsx-uses-react": "error",
       "react/jsx-uses-vars": "error",
-      "no-unused-vars": [
-        "error",
-        {
-          "argsIgnorePattern": "^_",
-          "varsIgnorePattern": "^h$"
-        }
-      ],
+      "no-unused-vars": [ "error", {
+        "argsIgnorePattern": "^_"
+      }],
       "no-console": [
         "off"
       ]
